@@ -1,0 +1,17 @@
+<% if @pokemon %>
+  <h1>Affichage d'un pokémon</h1> <br>
+  <p>Id: <%= @pokemon.id %></p>
+  <p>Name: <%= @pokemon.name %></p>
+  <p>Number: <%= @pokemon.number %></p>
+  <p>Level: <%= @pokemon.level %></p>
+  <p>Life points: <%= @pokemon.health_points %></p>
+<% else %>
+  <h1>Aucun pokemon correspondant</h1>
+<% end %>
+
+<p>
+  <%= link_to 'Liste des Pokemons', pokemons_path, class: 'btn btn-md btn-primary' %>
+</p>
+<p>
+  <%= link_to 'Ajouter un Pokemon', new_pokemon_path, class: 'btn btn-md btn-success' %>
+</p>
