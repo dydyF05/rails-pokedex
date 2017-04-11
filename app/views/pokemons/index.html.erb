@@ -9,6 +9,7 @@
         <td>Number</td>
         <td>Level</td>
         <td>Health points</td>
+        <td>Type</td>
         <td class="text-center" colspan="3">Actions</td>
       </tr>
     </thead>
@@ -20,6 +21,12 @@
           <td><%= pokemon.number %></td>
           <td><%= pokemon.level %></td>
           <td><%= pokemon.health_points %> hp</td>
+          <td>
+            <% type = pokemon.type %>
+            <% unless type.nil? %>
+              <%= type_badge(type.name, type.color) %>
+            <% end %>
+          </td>
           <td><%= link_to 'Show', pokemon_path(pokemon.id), class: 'btn btn-xs btn-default' %></td>
           <td><%= link_to 'Edit', edit_pokemon_path(pokemon.id), class: 'btn btn-xs btn-warning' %></td>
           <td><%= link_to 'Remove', pokemon,

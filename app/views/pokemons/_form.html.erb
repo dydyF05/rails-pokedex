@@ -1,20 +1,19 @@
-<%= form_for @pokemon, html: {class: 'form-horizontal'} do |f| %>
+<%= simple_form_for @pokemon, html: {class: 'form-horizontal'} do |f| %>
 <div class="row">
-  <div class="form-group col-lg-5">
-    <%= f.label :name, 'Name', class: 'control-label' %>
-    <%= f.text_field :name, class: 'form-control' %>
+  <div class="input-group col-lg-5">
+    <%= f.input :name, label: 'Name', hint: 'No special characters.', class: 'form-control' %>
   </div>
-  <div class="form-group col-lg-5">
-    <%= f.label :number, 'Number', class: 'control-label' %>
-    <%= f.number_field :number, class: 'form-control', within: 1..151, step: 1 %>
+  <div class="input-group col-lg-5">
+    <%= f.input :level, label: 'Level', hint: 'No special characters.', class: 'form-control' %>
   </div>
-  <div class="form-group col-lg-5">
-    <%= f.label :level, 'Level', class: 'control-label' %>
-    <%= f.number_field :level, class: 'form-control', placeholder: 'weak ass mofo', within: 1..100, step: 1 %>
+  <div class="input-group col-lg-5">
+    <%= f.input :number, label: 'Number', hint: 'No special characters.', class: 'form-control' %>
   </div>
-  <div class="form-group col-lg-5">
-    <%= f.label :health_points, 'Health points', class: 'control-label' %>
-    <%= f.number_field :health_points, class: 'form-control', within: 10..1000, step: 1 %>
+  <div class="input-group col-lg-5">
+    <%= f.input :health_points, label: 'Life points', hint: 'No special characters.', class: 'form-control' %>
+  </div>
+  <div class="input-group col-lg-5">
+    <%= f.association :type, label: 'Type', hint: 'What kinda pokemon is this fucker ?', class: 'form-control' %>
   </div>
 </div>
 
