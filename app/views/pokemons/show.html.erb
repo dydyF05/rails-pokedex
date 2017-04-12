@@ -11,6 +11,9 @@
       <%= type_badge(type.name, type.color) %>
     </p>
   <% end %>
+  <p>
+    Attaques: <%= render partial: 'moves_list', locals: { moves: @pokemon.moves } %>
+  </p>
 <% else %>
   <h1>Aucun pokemon correspondant</h1>
 <% end %>
