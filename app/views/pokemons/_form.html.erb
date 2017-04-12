@@ -1,5 +1,5 @@
 <%= simple_form_for @pokemon, html: {class: 'form-horizontal'} do |f| %>
-<div class="row">
+<div class="">
   <div class="input-group col-lg-5">
     <%= f.input :name, label: 'Name', hint: 'No special characters.', class: 'form-control' %>
   </div>
@@ -16,7 +16,7 @@
     <%= f.association :type, label: 'Type', hint: 'What kinda pokemon is this fucker ?', class: 'form-control' %>
   </div>
   <div class="input-group col-lg-5">
-    <%= f.association :moves, label: 'Attaques', class: 'form-control' %>
+    <%= f.association :moves, label: 'Attaques', as: :check_boxes, class: 'form-control' %>
   </div>
 </div>
 

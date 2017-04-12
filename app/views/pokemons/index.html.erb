@@ -25,7 +25,7 @@
           <td>
             <% type = pokemon.type %>
             <% unless type.nil? %>
-              <%= type_badge(type.name, type.color) %>
+              <%= type_badge(type) %>
             <% end %>
           </td>
           <td><%= link_to 'Show', pokemon_path(pokemon.id), class: 'btn btn-xs btn-default' %></td>
